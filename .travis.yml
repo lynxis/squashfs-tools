@@ -5,7 +5,6 @@ script:
  - make checkstyle
  - make
 
-
 addons:
   apt:
     packages:
