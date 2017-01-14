@@ -9,3 +9,5 @@ addons:
   apt:
     packages:
       - astyle
+      - lzma
+      - lzma-dev
