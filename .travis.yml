@@ -1,6 +1,10 @@
 language: c
 sudo: false
 
+os:
+  - linux
+  - osx
+
 script:
  - cd squashfs-tools/ ; make checkstyle
  - cd squashfs-tools/ ; make LZMA_XZ_SUPPORT=1 XZ_SUPPORT=1 XATTR_SUPPORT=
