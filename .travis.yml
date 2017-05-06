@@ -10,8 +10,8 @@ before_install:
   - if [[ "$TRAVIS_OS_NAME" == "osx" ]] ; then  brew install xz ; fi
 
 script:
- - if [[ "$TRAVIS_OS_NAME" == "linux" ]] ; then cd squashfs-tools/ && make checkstyle ; fi
- - cd squashfs-tools/ && make LZMA_XZ_SUPPORT=1 XZ_SUPPORT=1 XATTR_SUPPORT=
+  - if [[ "$TRAVIS_OS_NAME" == "linux" ]] ; then cd squashfs-tools/ && make checkstyle ; fi
+  - cd squashfs-tools/ && make LZMA_XZ_SUPPORT=1 XZ_SUPPORT=1 XATTR_SUPPORT=
 
 addons:
   apt:
