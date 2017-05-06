@@ -6,11 +6,11 @@ os:
   - osx
 
 before_install:
-  - test "$TRAVIS_OS_NAME" = "macos" && brew update
-  - test "$TRAVIS_OS_NAME" = "macos" && brew install xz
+  - if [[ "$TRAVIS_OS_NAME" == "macos" ]] ; then brew update ; fi
+  - if [[ "$TRAVIS_OS_NAME" = "macos" ]] ; then  brew install xz ; fi
 
 script:
- - test "$TRAVIS_OS_NAME" = "linux" && cd squashfs-tools/ && make checkstyle
+ - if [[ "$TRAVIS_OS_NAME" == "linux" ]] ; then cd squashfs-tools/ && make checkstyle ; fi
  - cd squashfs-tools/ && make LZMA_XZ_SUPPORT=1 XZ_SUPPORT=1 XATTR_SUPPORT=
 
 addons:
