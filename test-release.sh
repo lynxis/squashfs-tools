@@ -10,4 +10,4 @@ wget https://github.com/squashfskit/squashfskit/releases/download/v4.14/squashfs
 tar Jxf squashfskit-v4.14.tar.xz
 cd ./squashfskit-v4.14/squashfs-tools/
 
-make
+make LZMA_XZ_SUPPORT=1 XZ_SUPPORT=1 XATTR_SUPPORT=
